@@ -50,7 +50,7 @@ export const useGlyph = () => {
 
         const newGlyphs = Object.values(selectedGlyph)
             // @ts-ignore
-            .filter((g) => g.unicode !== undefined)
+            // .filter((g) => g.unicode !== undefined)
             // @ts-ignore
             .sort((a, b) => a.index - b.index)
             // .slice(0, 20)
@@ -74,6 +74,7 @@ export const useGlyph = () => {
                     html_code: hasUnicode ? `&#${hasUnicode};` : undefined,
                     glyph_id: glyphIndex,
                     name: glyphName,
+                    open_type: openType,
                 };
             });
 

@@ -1,4 +1,5 @@
 import type { Font as OpentypeFont } from "opentype.js";
+export type { Font as OpentypeFont } from "opentype.js";
 
 export type ActionMap<M extends { [index: string]: any }> = {
     [Key in keyof M]: M[Key] extends undefined
@@ -53,4 +54,5 @@ export interface Glyph {
     glyph_id: number;
     name: string;
     pathh?: string;
+    open_type: OpentypeFont;
 }
