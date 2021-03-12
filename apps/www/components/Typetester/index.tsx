@@ -46,6 +46,7 @@ export const Typetester = () => {
             <div style={{ overflow: "hidden" }}>
                 <Editable
                     html={text}
+                    spellCheck={false}
                     onChange={(e) =>
                         dispatch({ type: "text", payload: e.target.value })
                     }
