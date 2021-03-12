@@ -1,7 +1,8 @@
 import NextHead from "next/head";
 import { useFont } from "@pulipola/typetools";
-import { Glyph } from "components/Glyph";
 import { Main } from "components/Layouts";
+import { Glyph } from "components/Glyph";
+import { GlyphModal } from "components/Glyph/Modal";
 
 export default function Page() {
     const { font } = useFont();
@@ -13,6 +14,7 @@ export default function Page() {
             <Main>
                 <Glyph />
             </Main>
+            <GlyphModal />
         </>
     );
 }
