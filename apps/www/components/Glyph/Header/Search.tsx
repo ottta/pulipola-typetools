@@ -1,5 +1,5 @@
 import styles from "./header.module.scss";
-import { useGlyphDisplay } from "../index";
+import { useGlyphDisplay } from "lib/context/ContextGlyphDisplay";
 
 export const Search = () => {
     const { search, setSearch } = useGlyphDisplay();

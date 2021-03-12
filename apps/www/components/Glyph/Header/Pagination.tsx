@@ -1,5 +1,5 @@
 import styles from "./pagination.module.scss";
-import { useGlyphDisplay } from "..";
+import { useGlyphDisplay } from "lib/context/ContextGlyphDisplay";
 
 export const Pagination = () => {
     const { pagination } = useGlyphDisplay();

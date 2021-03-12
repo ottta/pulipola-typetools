@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { AppProps } from "next/app";
 import { ProviderTheme } from "@pulipola/ui";
 import { ProviderTypetools, ProviderTypetester } from "@pulipola/typetools";
+import { ProviderGlyphDisplay } from "lib/context/ContextGlyphDisplay";
 import * as gtag from "lib/gtag";
 import { defaultFonts, texts } from "lib/constants";
 import { Aside } from "components/Aside";
@@ -34,9 +35,11 @@ export default function MyApp({ Component, pageProps, router }: AppProps) {
                             fontLeading: 1,
                         }}
                     >
-                        <Aside />
-                        <Controller />
-                        <Component {...pageProps} />
+                        <ProviderGlyphDisplay>
+                            <Aside />
+                            <Controller />
+                            <Component {...pageProps} />
+                        </ProviderGlyphDisplay>
                     </ProviderTypetester>
                 </ProviderTypetools>
             </ProviderTheme>

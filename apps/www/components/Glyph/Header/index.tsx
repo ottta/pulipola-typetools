@@ -1,5 +1,5 @@
 import styles from "./header.module.scss";
-import { useGlyphDisplay } from "..";
+import { useGlyphDisplay } from "lib/context/ContextGlyphDisplay";
 import { Pagination } from "./Pagination";
 import { Search } from "./Search";
 
