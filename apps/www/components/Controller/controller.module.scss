@@ -21,3 +21,37 @@
     overflow: scroll;
     scroll-behavior: smooth;
 }
+
+.button_group {
+    display: flex;
+    gap: var(--grid-gap);
+    // background-color: magenta;
+    margin-bottom: 1rem;
+
+    button {
+        outline: none;
+        background: none;
+        border: 1px solid;
+        cursor: pointer;
+        border-radius: 5rem;
+        color: currentColor;
+        padding: var(--grid-gap) 0.5rem;
+        @mixin active {
+            background-color: var(--geist-pp-color);
+        }
+
+        &:enabled {
+            &:hover {
+                &[data-modified="false"] {
+                    @include active();
+                }
+            }
+            &[aria-current="true"] {
+                @include active();
+            }
+        }
+        &:disabled {
+            color: var(--accents-3);
+        }
+    }
+}

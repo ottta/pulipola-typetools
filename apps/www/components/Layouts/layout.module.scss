@@ -8,3 +8,25 @@
     //     gap: var(--grid-gap);
     // }
 }
+
+.tab {
+    overflow: hidden;
+    // padding: 0 1rem;
+    padding: var(--grid-gap) 0 0;
+    border-bottom: 1px solid var(--accents-3);
+    height: var(--header-height);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
+    // align-items: center;
+    gap: var(--grid-gap);
+    // white-space: nowrap;
+
+    position: sticky;
+    top: 0;
+    background-color: var(--accents-2);
+    z-index: 10;
+
+    a {
+        border: 1px solid;
+    }
+}

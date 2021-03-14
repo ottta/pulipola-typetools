@@ -1,3 +1,4 @@
+import styles from "./layout.module.scss";
 import type { FC } from "react";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
@@ -13,17 +14,7 @@ export const Main: FC = ({ children }) => {
                     borderLeft: "1px solid",
                 }}
             >
-                <header
-                    className="app-header"
-                    style={{
-                        justifyContent: "flex-start",
-                        gap: "var(--grid-gap)",
-                        position: "sticky",
-                        top: 0,
-                        backgroundColor: "var(--accents-2)",
-                        zIndex: 10,
-                    }}
-                >
+                <header className={styles.tab}>
                     <NextLink href="/">
                         <a
                             data-active={pathname === "/"}

@@ -111,13 +111,15 @@ const GlyphInspector = ({ glyph }: GlyphInspectorProps) => {
                                     y2={yUnits}
                                     data-id={id}
                                     stroke={
-                                        id === "baseline"
-                                            ? "var(--geist-pp-color)"
+                                        id === "baseline" || id === "x-height"
+                                            ? "red"
                                             : "var(--accents-4)"
                                     }
                                     strokeWidth="1"
                                     strokeDasharray={
-                                        id === "baseline" ? "1 1" : "0"
+                                        id === "baseline" || id === "x-height"
+                                            ? "2 2"
+                                            : "0"
                                     }
                                 />
                                 <text
@@ -125,8 +127,8 @@ const GlyphInspector = ({ glyph }: GlyphInspectorProps) => {
                                     fontSize="var(--text-small)"
                                     fontFamily="var(--font-monospace)"
                                     fill={
-                                        id === "baseline"
-                                            ? "var(--geist-pp-color)"
+                                        id === "baseline" || id === "x-height"
+                                            ? "red"
                                             : "currentColor"
                                     }
                                 >

@@ -34,9 +34,10 @@ export const Controller = () => {
                         Controller
                     </div>
                     <div className={styles.controller}>
-                        <div>
+                        <div className={styles.button_group}>
                             <button
                                 // disabled={disable}
+                                aria-current={state.fontOutline}
                                 onClick={() =>
                                     dispatch({
                                         type: "fontOutline",
@@ -48,6 +49,7 @@ export const Controller = () => {
                             </button>
                             <button
                                 disabled={disable}
+                                data-modified={state === initialState}
                                 onClick={() =>
                                     dispatch({
                                         type: "resetAll",
